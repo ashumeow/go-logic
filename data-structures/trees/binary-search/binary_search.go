@@ -2,9 +2,6 @@
 
 package main
 
-// importing packages
-import "ashumeow/meow_tree"
-
 // declaring types
 type binary_search_tree struct {
 	parent, left, right *binary_search_tree
@@ -33,13 +30,15 @@ func(ig *binary_search_tree) meowSearch(x interface{}) interface{} {
 	case -1:
 		if ig.right==nil {
 			return nil
-		} else
-		return ig.right.meowSearch(x)
+		} else {
+			return ig.right.meowSearch(x)
+		}
 	case 1:
 		if ig.left==nil {
 			return nil
-		} else 
-		return ig.left.meowSearch(x)
+		} else {
+			return ig.left.meowSearch(x)
+		}
 	default:
 		panic("invalid compare function")
 	}
@@ -84,3 +83,4 @@ func (ig *binary_search_tree) meowInsert(value interface{}) {
 		panic("invalid compare function")
 	}
 }
+func main() {}
