@@ -29,8 +29,8 @@ func quick(meow []int) []int {
 	}
 	low = quick(low)
 	high = quick(high)
-	low = append(low, middle)
-	low = append(low, high)
+	low = append(low, middle...)
+	low = append(low, high...)
 	return low
 }
 
