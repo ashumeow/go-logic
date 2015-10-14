@@ -1,0 +1,3 @@
+***
+Some tiny Logical works done in Go...
+***
