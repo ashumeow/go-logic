@@ -7,14 +7,14 @@ import (
 	"ashumeow/meow_sort"
 )
 
-func main {
+func main() {
 	meow := meow_sort.RandArray(10)
 	fmt.Println("Given array is: ", meow)
 	fmt.Println("")
-	for ig_ig := int(len(arr)/2); ig_ig > 0; ig_ig /= 2 {
+	for ig_ig := int(len(meow)/2); ig_ig > 0; ig_ig /= 2 {
 		for x := ig_ig; x < len(meow); x++ {
 			for xx := x; xx >= ig_ig && meow[xx - ig_ig] > meow[xx]; xx -= ig_ig {
-				meow[xx], meow[meow - ig_ig] = meow[xx - ig_ig], meow[xx]
+				meow[xx], meow[xx - ig_ig] = meow[xx - ig_ig], meow[xx]
 			}
 		}
 	}
