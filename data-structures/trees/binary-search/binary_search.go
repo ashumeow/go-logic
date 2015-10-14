@@ -56,3 +56,31 @@ func (ig *binary_search_tree) meowEmpty() bool {
 }
 
 // Insertion... adding a key and value pair
+func (ig *binary_search_tree) meowInsert(value interface{}) {
+	if ig.meowNode==nil {
+		ig.meowNode=value
+		return
+	}
+	meowDir := ig.compare(ig.meowNode, value)
+
+	switch meowDir {
+	case 0:
+		ig.meowNode=value
+	case 1:
+		if ig.left==nil {
+			ig.left=new_binary_search_tree(value,ig.compare)
+			ig.left.parent=ig
+		} else {
+			ig.left.meowInsert(value)
+		}
+	case -1:
+		if ig.right==nil {
+			ig.right=new_binary_search_tree(value,ig.compare)
+			ig.right.parent=ig
+		} else {
+			ig.right.meowInsert(value)
+		}
+	default:
+		panic("invalid compare function")
+	}
+}
