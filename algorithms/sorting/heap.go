@@ -6,7 +6,7 @@ import (
 	"ashumeow/meow_sort"
 )
 
-function heap(meow []int, x int, meowArrLen int) [] int {
+func heap(meow []int, x int, meowArrLen int) []int {
 	end := false
 	temp := 0
 	maxBaby := 0
