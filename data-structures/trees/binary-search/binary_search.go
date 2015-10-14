@@ -46,3 +46,13 @@ func(ig *binary_search_tree) meowSearch(x interface{}) interface{} {
 }
 
 // checks for key existence
+func (ig *binary_search_tree) meowExists(meowKey interface{}) bool {
+	return ig.meowSearch(meowKey) != nil
+}
+
+// check if empty
+func (ig *binary_search_tree) meowEmpty() bool {
+	return ig.meowNode == nil
+}
+
+// Insertion... adding a key and value pair
