@@ -15,7 +15,7 @@ func main() {
 	var minimum int = 0
 	var temp int = 0
 
-	for x := 0; x < len(meow_sort); x++ {
+	for x := 0; x < len(meow); x++ {
 		minimum = x
 		for xx := x + 1; xx < len(meow); xx++ {
 			if meow[xx] < meow[minimum] {
