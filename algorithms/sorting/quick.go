@@ -17,7 +17,7 @@ func quick(meow []int) []int {
 	high := make([]int,0,len(meow))
 	middle := make([]int,0,len(meow))
 
-	for ig_ig, stuffs := range meow {
+	for stuffs := range meow {
 		switch {
 			case stuffs < median:
 				low = append(low, stuffs)
