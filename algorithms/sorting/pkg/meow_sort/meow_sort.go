@@ -3,7 +3,7 @@ package meow_sort
 
 import "math/rand"
 
-func meowArray(ig int) []int {
+func RandArray(ig int) []int {
 	meow := make([]int, ig)
 
 	for x := 0; x <= ig - 1; x++ {
